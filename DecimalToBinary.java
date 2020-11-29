@@ -11,18 +11,21 @@ public class DecimalToBinary {
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("Enter a decimal number: ");
 		int dec = Integer.parseInt(scanner.nextLine());
+		System.out.print(dec + " in binary is: ");
+		
 		int[] bin = new int[20];
 		int index = 0;
+		
 		while (dec > 0) {
 			bin[index++] = dec%2;    
 			dec = dec/2;
 		}
+		
 		for (int i = index-1; i >= 0; i = i - 1) {    
 			System.out.print(bin[i]);
 		}
-		System.out.println();
-		scanner.close();
-		
-	}
 
+		System.out.println();
+		scanner.close();	
+	}
 }
